@@ -1,0 +1,13 @@
+{
+  "name": "ai-seo-strategy-dashboard-root",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:api": "npm --prefix backend/api run dev",
+    "dev:realtime": "npm --prefix backend/realtime run dev",
+    "install:api": "npm --prefix backend/api install",
+    "install:realtime": "npm --prefix backend/realtime install",
+    "typecheck:frontend": "npm --prefix frontend run typecheck",
+    "typecheck:api": "npm --prefix backend/api run typecheck"
+  }
+}

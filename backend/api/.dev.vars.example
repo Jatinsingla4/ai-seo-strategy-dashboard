@@ -1,0 +1,19 @@
+# Copy this file to .dev.vars for local Wrangler development.
+# NEVER commit .dev.vars to version control.
+# In production, use: wrangler secret put <KEY_NAME>
+
+# Google Gemini API key — https://aistudio.google.com/app/apikey
+GEMINI_API_KEY=
+
+# Google OAuth Client ID (same as frontend)
+GOOGLE_CLIENT_ID=
+
+# Allowed CORS origin (your frontend URL)
+FRONTEND_ORIGIN=http://localhost:3000
+
+# Shared secret between API worker and realtime worker for /broadcast auth
+# Generate with: openssl rand -base64 32
+BROADCAST_SECRET=
+
+# URL of the realtime Durable Object worker
+REALTIME_URL=http://localhost:8788

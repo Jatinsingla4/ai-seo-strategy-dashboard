@@ -1,0 +1,20 @@
+name = "threezinc-realtime"
+main = "src/index.ts"
+compatibility_date = "2026-04-14"
+
+[dev]
+port = 8788
+
+# ── Secret vars ────────────────────────────────────────────────────────────────
+# For local dev: create backend/realtime/.dev.vars with BROADCAST_SECRET=<value>
+# For production: wrangler secret put BROADCAST_SECRET
+[vars]
+# BROADCAST_SECRET read from .dev.vars for security
+
+[[durable_objects.bindings]]
+name = "REALTIME_ROOM"
+class_name = "RealtimeRoom"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["RealtimeRoom"]

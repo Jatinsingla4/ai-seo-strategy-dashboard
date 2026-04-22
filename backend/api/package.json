@@ -1,0 +1,22 @@
+{
+  "name": "@threezinc/api",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@trpc/server": "^11.0.0",
+    "jose": "^6.2.2",
+    "superjson": "^2.2.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "typescript": "^5.8.2",
+    "wrangler": "^4.0.0"
+  }
+}

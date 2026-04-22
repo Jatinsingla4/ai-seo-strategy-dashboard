@@ -1,0 +1,25 @@
+name = "threezinc-api"
+main = "src/index.ts"
+compatibility_date = "2026-04-14"
+
+[dev]
+port = 8787
+
+# ── Secrets ────────────────────────────────────────────────────────────────────
+# For local dev: put real values in .dev.vars (gitignored).
+# For production: wrangler secret put <KEY_NAME>
+#
+#   wrangler secret put GEMINI_API_KEY
+#   wrangler secret put GOOGLE_CLIENT_ID
+#   wrangler secret put FRONTEND_ORIGIN
+#   wrangler secret put BROADCAST_SECRET
+#   wrangler secret put REALTIME_URL
+
+# ── D1 Database ────────────────────────────────────────────────────────────────
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "threezinc-db"
+migrations_dir = "migrations"
